@@ -1,4 +1,4 @@
-package com.example.schwarz;
+package com.jwg.schwarz;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.schwarz;
+package com.jwg.schwarz;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
+import jwg.schwarz.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,16 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
+
         ConstraintLayout layout = (ConstraintLayout)findViewById(R.id.main_layout);
-        View.OnTouchListener onTouchListener = new View.OnTouchListener() {
+
+        layout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 hideSystemUI();
                 return true;
             }
-        };
-         */
+        });
+
     }
 
     @Override
@@ -34,14 +37,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         hideSystemUI();
         return true;
         //return super.onTouchEvent(event);
     }
-
 
     private void hideSystemUI() {
         // Enables regular immersive mode.
